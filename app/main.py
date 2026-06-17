@@ -1,7 +1,7 @@
 class Person:
     people = {}
 
-    def init(self, name: str, age: int) -> None:
+    def __init__(self, name: str, age: int) -> None:
         self.name = name
         self.age = age
         Person.people[name] = self
@@ -12,8 +12,7 @@ def create_person_list(people: list) -> list:
 
 
     person_instances = [
-        Person(p["name"], p["age"]) for p in people
-    ]
+        Person(p["name"], p["age"]) for p in people]
 
 
     for person_dict in people:
